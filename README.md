@@ -1,102 +1,63 @@
-# 欢迎使用你的秒哒应用代码包
-秒哒应用链接
-    URL:https://www.miaoda.cn/projects/app-a5aanwd65h4x
+# 极客互动-企业微信API开放平台
+极客互动官方地址：https://www.jikehudong.com/
+
+企微API文档在线调用：https://wechatapi.apifox.cn/
+
+在线技术支持：Mrzhu0107
+
 
 ## 介绍
 
-项目介绍
+企业微信iPad协议是一套基于企业微信 iPad 客户端的智能接口服务解决方案，可全覆盖原生客户端能力，支持丰富的消息类型与客户端全套操作功能，无任何功能阉割。
+
+✅ 全类型消息覆盖
+
+支持文本消息、名片消息、CDN图片/文件/语音消息、大视频/大文件、链接卡片、小程序、GIF表情、位置消息、群@消息等全品类消息发送。
+
+✅ 全套原生操作能力
+
+支持撤回消息、同步消息记录、语音转文字、消息已读清零、引用消息、群友互动、客户群/联系人列表获取、账号登录登出、二次验证、自动登录等全部操作，完整复刻企微原生能力，零功能缺失。
 
 ## 目录结构
 
 ```
-├── README.md # 说明文档
-├── components.json # 组件库配置
-├── index.html # 入口文件
-├── package.json # 包管理
-├── postcss.config.js # postcss 配置
-├── public # 静态资源目录
-│   ├── favicon.png # 图标
-│   └── images # 图片资源
-├── src # 源码目录
-│   ├── App.tsx # 入口文件
-│   ├── components # 组件目录
-│   ├── contexts # 上下文目录
-│   ├── db # 数据库配置目录
-│   ├── hooks # 通用钩子函数目录
-│   ├── index.css # 全局样式
-│   ├── layout # 布局目录
-│   ├── lib # 工具库目录
-│   ├── main.tsx # 入口文件
-│   ├── routes.tsx # 路由配置
-│   ├── pages # 页面目录
-│   ├── services  # 数据库交互目录
-│   ├── types   # 类型定义目录
-├── tsconfig.app.json  # ts 前端配置文件
-├── tsconfig.json # ts 配置文件
-├── tsconfig.node.json # ts node端配置文件
-└── vite.config.ts # vite 配置文件
+🟢 步骤一
+进入【初始化】‑【初始化企业微信】，使用默认参数发起请求，接口返回得到一个 UUID。
+🟢 步骤二
+进入【登录】‑【获取登录二维码】，传入上一步拿到的 UUID 发起请求；接口返回登录二维码与 Key，使用企业微信手机端完成扫码。
+🟢 步骤三
+进入【登录】‑【验证码设置】接口，将 UUID、Key、手机端展示的验证码 三项参数完整填入，执行 POST 请求（登录流程未完成前，请不要关闭手机端验证码页面）。
+🟢 步骤四
+至此你的企业微信账号已成功登录至 iPad 协议服务端。配置消息回调地址后，即可调用全套 API，实现企微账号消息收发、各类业务操作。
 ```
 
 ## 技术栈
 
-Vite、TypeScript、React、Supabase
+java   C   
 
 ## 本地开发
 
 ### 如何在本地编辑代码？
 
-您可以选择 [VSCode](https://code.visualstudio.com/Download) 或者您常用的任何 IDE 编辑器，唯一的要求是安装 Node.js 和 npm.
+企微API文档在线调用：https://wechatapi.apifox.cn/
 
-### 环境要求
+根据在线文档可以快速进行项目接入，接口为HTTP类型，POST请求即可！
 
-```
-# Node.js ≥ 20
-# npm ≥ 10
-例如：
-# node -v   # v20.18.3
-# npm -v    # 10.8.2
-```
+### 开发支持与技术集成
 
-具体安装步骤如下：
+Java、Python、C++、Go、Node.js、PHP、C#
 
-### 在 Windows 上安装 Node.js
 
-```
-# Step 1: 访问Node.js官网：https://nodejs.org/，点击下载后，会根据你的系统自动选择合适的版本（32位或64位）。
-# Step 2: 运行安装程序：下载完成后，双击运行安装程序。
-# Step 3: 完成安装：按照安装向导完成安装过程。
-# Step 4: 验证安装：在命令提示符（cmd）或IDE终端（terminal）中输入 node -v 和 npm -v 来检查 Node.js 和 npm 是否正确安装。
-```
+### 技术支持服务
 
-### 在 macOS 上安装 Node.js
+• 7×24小时售后微信群技术支持
 
-```
-# Step 1: 使用Homebrew安装（推荐方法）：打开终端。输入命令brew install node并回车。如果尚未安装Homebrew，需要先安装Homebrew，
-可以通过在终端中运行如下命令来安装：
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-或者使用官网安装程序：访问Node.js官网。下载macOS的.pkg安装包。打开下载的.pkg文件，按照提示完成安装。
-# Step 2: 验证安装：在命令提示符（cmd）或IDE终端（terminal）中输入 node -v 和 npm -v 来检查 Node.js 和 npm 是否正确安装。
-```
+• 提供项目定制化开发
 
-### 安装完后按照如下步骤操作：
+• 协助客户完成系统对接集成
 
-```
-# Step 1: 下载代码包
-# Step 2: 解压代码包
-# Step 3: 用IDE打开代码包，进入代码目录
-# Step 4: IDE终端输入命令行，安装依赖：npm i
-# Step 5: IDE终端输入命令行，启动开发服务器：npm run dev -- --host 127.0.0.1
-```
+• 持续迭代新增产品功能
 
-### 如何开发后端服务？
+• 定期发布Bug修复维护版本
 
-配置环境变量，安装相关依赖
-如需使用数据库，请使用 supabase 官方版本或自行部署开源版本的 Supabase
 
-### 如何配置应用中的三方 API？
-
-具体三方 API 调用方法，请参考帮助文档：[源码导出](https://cloud.baidu.com/doc/MIAODA/s/Xmewgmsq7)，了解更多详细内容。
-
-## 了解更多
-
-您也可以查看帮助文档：[源码导出](https://cloud.baidu.com/doc/MIAODA/s/Xmewgmsq7)，了解更多详细内容。
